@@ -7,8 +7,7 @@ var path = require('path');
 var fs = require('fs');
 var program = require('commander');
 
-var localPath = path.join(__dirname, 'node_modules');
-localPath = path.join(localPath, '.bin');
+var localPath = path.join(__dirname, '.bin');
 localPath = path.join(localPath, 'sequelize-auto');
 
 var converter = function(fileContent, filename, mode){
