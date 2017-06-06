@@ -51,10 +51,11 @@ program
     .option('-x, --password <password>', 'The password of the database')
     .parse(process.argv);
 
+var modelsPath = path.join(process.cwd(), program.output);
+
 const executableCommand = `${localPath} -o ${program.output} -h ${program.host} -d ${program.database} -u ${program.username} -p ${program.port} -x ${program.password} -e mysql`;
 shell.exec(executableCommand);
 
-var modelsPath = path.join(__dirname, program.output);
 var modelsDir = fs.readdirSync(modelsPath);
 
 modelsDir.forEach(function(filename){
