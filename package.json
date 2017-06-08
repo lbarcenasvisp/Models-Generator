@@ -1,6 +1,6 @@
 {
   "name": "models-generator",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A cli tool for generating models from a database",
   "bin": {
     "generate": "./index.js"
@@ -22,7 +22,9 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
+    "get-installed-path": "^2.0.3",
     "mysql": "^2.13.0",
+    "pkg-dir": "^2.0.0",
     "sequelize-auto": "^0.4.28",
     "shelljs": "^0.7.7"
   }

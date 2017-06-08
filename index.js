@@ -2,13 +2,16 @@
 
 var shell = require('shelljs');
 var chalk = require('chalk');
-var exec = require('child_process').execSync;
 var path = require('path');
 var fs = require('fs');
 var program = require('commander');
+var pkgDir = require('pkg-dir');
 
-var localPath = path.join(__dirname, '.bin');
-localPath = path.join(localPath, 'sequelize-auto');
+var localPath = '';
+pkgDir(__dirname).then(rootDir => {
+    localPath = rootDir;
+})
+localPath = path.join(localPath, 'node_modules/.bin/sequelize-auto');
 
 var converter = function(fileContent, filename, mode){
     var fname = filename;
@@ -54,9 +57,9 @@ program
 var modelsPath = path.join(process.cwd(), program.output);
 
 const executableCommand = `${localPath} -o ${program.output} -h ${program.host} -d ${program.database} -u ${program.username} -p ${program.port} -x ${program.password} -e mysql`;
-shell.exec(executableCommand);
+shell.exec(executableCommand, {async: false});
 
-var modelsDir = fs.readdirSync(modelsPath);
+var modelsDir = fs.readdirSync(modelsPath);    
 
 modelsDir.forEach(function(filename){
     var segments = filename.replace('.js', '').split('_');
