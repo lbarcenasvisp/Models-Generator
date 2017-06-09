@@ -20,6 +20,7 @@ export {tablenameModel};
 - **tablename** : Table name from your mysql database
 
 ## Installing
+Must have installed [mysql](https://www.npmjs.com/package/mysql) globally
 
 ```
 $ npm install -g models-generator
