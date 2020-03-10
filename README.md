@@ -2,7 +2,7 @@
 A cli tool for generating sequelize models from a mysql database with the following code format:
 ```
 import Sequelize from 'sequelize'
-import {db} from '../../sequelize_connection.js'
+import {db} from '~/data/sequelize_connection'
 db.define('aaatest', {
     field_1: {
         type:  Sequelize.INTEGER(11),
