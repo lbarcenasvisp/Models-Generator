@@ -31,7 +31,7 @@ var converter = function(fileContent, filename, mode){
     })
     modelName = modelName.join("") + "Model";
     file = "import Sequelize from 'sequelize'\n";
-    file += "import {db} from '../../sequelize_connection.js'\n";
+    file += "import {db} from '~/data/sequelize_connection'\n";
     file += "db.define('"+fname+"', {\n";
     file += object + "\n";
     file += "\t}, {\n";
