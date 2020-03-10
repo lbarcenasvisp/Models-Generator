@@ -1,7 +1,7 @@
 {
-  "name": "models-generator",
-  "version": "1.0.9",
-  "description": "A cli tool for generating models from a database",
+  "name": "models-generator-2",
+  "version": "1.0.0",
+  "description": "A cli tool for generating models from a database. Forked from JCahiles. https://github.com/jcahiles-visp-net/Models-Generator",
   "bin": {
     "generate": "./index.js"
   },
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcahiles-visp-net/Models-Generator.git"
+    "url": "git+https://github.com/lbarcenasvisp/Models-Generator.git"
   },
   "author": "Jovan Jiv O. Cahiles",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jcahiles-visp-net/Models-Generator/issues"
   },
-  "homepage": "https://github.com/jcahiles-visp-net/Models-Generator#readme",
+  "homepage": "https://github.com/lbarcenasvisp/Models-Generator#models-generator",
   "dependencies": {
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
