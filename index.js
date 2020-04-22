@@ -29,11 +29,13 @@ var converter = function(fileContent, filename, mode, readonly){
     var modelName = segments.map(function(element){
         return element.replace(element[0], element[0].toUpperCase());
     })
-    var readOnlyModelName = ""
+    var readOnlyModelName = segments.map(function(element){
+        return element.replace(element[0], element[0].toUpperCase());
+    })
 
     modelName = modelName.join("") + "Model";
     if (readonly) {
-        readOnlyModelName = modelName.join("") + "ReadOnlyModel";
+        readOnlyModelName = readOnlyModelName.join("") + "ReadOnlyModel";
     }
 
     const dbImport = readonly ? "db, dbReadOnly" : "db";
