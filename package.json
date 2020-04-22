@@ -1,6 +1,6 @@
 {
   "name": "models-generator-2",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A cli tool for generating models from a database. Forked from JCahiles. https://github.com/jcahiles-visp-net/Models-Generator",
   "bin": {
     "generate": "./index.js"

@@ -86,7 +86,7 @@ shell.exec(executableCommand, {async: false});
 
 var modelsDir = fs.readdirSync(modelsPath);    
 
-const readonly = program.readonly === 1;
+const readonly = program.readonly === 1 || program.readonly == "1";
 
 modelsDir.forEach(function(filename){
     var segments = filename.replace('.js', '').split('_');
