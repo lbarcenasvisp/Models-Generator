@@ -23,7 +23,7 @@ export {tablenameModel};
 Must have installed [mysql](https://www.npmjs.com/package/mysql) globally
 
 ```
-$ npm install -g models-generator
+$ npm install -g models-generator-2
 ```
 
 ## Usage
